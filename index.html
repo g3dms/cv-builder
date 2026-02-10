@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple CV Builder</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CV Builder</h1>
+    
+    <div class="container">
+        <!-- Left: Editor -->
+        <div class="editor">
+            <h2>Your Information</h2>
+            
+            <div>
+                <h3>Personal Details</h3>
+                <div>
+                    <label>Full Name:</label>
+                    <input type="text" id="name" placeholder="John Doe">
+                </div>
+                <div>
+                    <label>Email:</label>
+                    <input type="email" id="email" placeholder="john@example.com">
+                </div>
+                <div>
+                    <label>Phone:</label>
+                    <input type="text" id="phone" placeholder="+852 1234 5678">
+                </div>
+                <div>
+                    <label>LinkedIn:</label>
+                    <input type="text" id="linkedin" placeholder="linkedin.com/in/johndoe">
+                </div>
+                <div>
+                    <label>GitHub:</label>
+                    <input type="text" id="github" placeholder="github.com/johndoe">
+                </div>
+            </div>
+            
+            <div>
+                <h3>Add Experience</h3>
+                <div>
+                    <label>Job Title:</label>
+                    <input type="text" id="jobTitle" placeholder="Software Developer">
+                </div>
+                <div>
+                    <label>Company:</label>
+                    <input type="text" id="company" placeholder="Tech Company Ltd">
+                </div>
+                <div>
+                    <label>Start Date:</label>
+                    <input type="month" id="startDate">
+                </div>
+                <div>
+                    <label>End Date:</label>
+                    <input type="month" id="endDate">
+                    <label>
+                        <input type="checkbox" id="currentJob"> Current Job
+                    </label>
+                </div>
+                <div>
+                    <label>Description:</label>
+                    <textarea id="description" rows="3"></textarea>
+                </div>
+                <button onclick="addExperience()">Add Experience</button>
+                
+                <div id="experienceList">
+                    <h4>Your Experiences:</h4>
+                    <!-- Experiences will appear here -->
+                </div>
+            </div>
+            
+            <div>
+                <h3>Skills</h3>
+                <div>
+                    <input type="text" id="newSkill" placeholder="Python, JavaScript, etc">
+                    <button onclick="addSkill()">Add Skill</button>
+                </div>
+                <div id="skillsDisplay"></div>
+            </div>
+            
+            <div>
+                <button onclick="saveCV()">Save CV</button>
+                <button onclick="exportHTML()">Export as HTML</button>
+                <button onclick="resetAll()">Clear All</button>
+            </div>
+        </div>
+        
+        <!-- Right: Preview -->
+        <div class="preview">
+            <h2>CV Preview</h2>
+            <div id="cvPreview">
+                <!-- CV will appear here -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

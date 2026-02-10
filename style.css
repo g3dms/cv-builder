@@ -1,0 +1,94 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    gap: 30px;
+}
+
+.editor {
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: #f9f9f9;
+}
+
+.preview {
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: white;
+}
+
+.editor h2, .preview h2 {
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.editor h3 {
+    margin: 15px 0 10px;
+    color: #555;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0 15px;
+    border: 1px solid #ddd;
+}
+
+textarea {
+    font-family: inherit;
+}
+
+button {
+    padding: 10px 15px;
+    background: #007acc;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background: #005fa3;
+}
+
+#experienceList, #skillsDisplay {
+    margin: 15px 0;
+    padding: 10px;
+    border: 1px dashed #ccc;
+}
+
+#cvPreview {
+    padding: 20px;
+    border: 1px solid #eee;
+}
+
+.experience-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.skill-tag {
+    display: inline-block;
+    background: #eee;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 3px;
+}
