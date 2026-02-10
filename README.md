@@ -2,14 +2,8 @@
 
 A simple tool to create professional CVs with reusable experience database.
 
-# (CURRENTLY VERY WORK-IN-PROGRESS!!!)
-
-## Features!
-- 📄 Multiple templates
-- 🗃️ Experience database
-- 📤 Export to PDF
-- 📱 Mobile-friendly
+*(CURRENTLY VERY WORK-IN-PROGRESS...)*
 
 ## Tech Stack
 - HTML/CSS/JavaScript
-- LocalStorage for data persistence
+- LocalStorage
