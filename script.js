@@ -15,7 +15,9 @@ function updatePreview() {
     
     // Name
     if (cvData.name) {
+        const name = document.getElementById('name').value;
         preview.innerHTML += `<h1>${cvData.name}</h1>`;
+        cvData.name.push(name);
     }
     
     // Contact info
