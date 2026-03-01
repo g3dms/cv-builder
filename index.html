@@ -8,81 +8,105 @@
     <h1>CV Builder</h1>
     
     <div class="container">
-        <div class="editor">
-            <h2>Your Information</h2>
-            
-            <div>
-                <h3>Personal Details</h3>
-                <div>
-                    <label>Full Name:</label>
-                    <input type="text" id="name" placeholder="John Doe">
-                </div>
-                <div>
-                    <label>Email:</label>
-                    <input type="email" id="email" placeholder="john@example.com">
-                </div>
-                <div>
-                    <label>Phone:</label>
-                    <input type="text" id="phone" placeholder="+852 1234 5678">
-                </div>
-                <div>
-                    <label>LinkedIn:</label>
-                    <input type="text" id="linkedin" placeholder="linkedin.com/in/johndoe">
-                </div>
-                <div>
-                    <label>GitHub:</label>
-                    <input type="text" id="github" placeholder="github.com/johndoe">
-                </div>
+        <!-- LEFT PANEL: Editor -->
+<div class="editor-panel">
+    
+    <!-- Personal Info Section - Dropdown -->
+    <details open>
+        <summary><strong>📋 Personal Information</strong></summary>
+        <div class="section-content">
+            <div class="form-group">
+                <label>Full Name:</label>
+                <input type="text" id="name" placeholder="John Doe">
             </div>
-            
-            <div>
-                <h3>Add Experience</h3>
-                <div>
+            <div class="form-group">
+                <label>Email:</label>
+                <input type="email" id="email" placeholder="john@example.com">
+            </div>
+            <div class="form-group">
+                <label>Phone:</label>
+                <input type="text" id="phone" placeholder="+852 1234 5678">
+            </div>
+            <div class="form-group">
+                <label>LinkedIn:</label>
+                <input type="text" id="linkedin" placeholder="linkedin.com/in/johndoe">
+            </div>
+            <div class="form-group">
+                <label>GitHub:</label>
+                <input type="text" id="github" placeholder="github.com/johndoe">
+            </div>
+        </div>
+    </details>
+    
+    <!-- Experience Section - Dropdown -->
+    <details open>
+        <summary><strong>💼 Experience</strong></summary>
+        <div class="section-content">
+            <div id="experience-form">
+                <div class="form-group">
                     <label>Job Title:</label>
                     <input type="text" id="jobTitle" placeholder="Software Developer">
                 </div>
-                <div>
+                <div class="form-group">
                     <label>Company:</label>
                     <input type="text" id="company" placeholder="Tech Company Ltd">
                 </div>
-                <div>
-                    <label>Start Date:</label>
-                    <input type="month" id="startDate">
+                <div class="form-row">
+                    <div class="form-group half">
+                        <label>Start:</label>
+                        <input type="month" id="startDate">
+                    </div>
+                    <div class="form-group half">
+                        <label>End:</label>
+                        <input type="month" id="endDate">
+                    </div>
                 </div>
-                <div>
-                    <label>End Date:</label>
-                    <input type="month" id="endDate">
+                <div class="form-group">
                     <label>
-                        <input type="checkbox" id="currentJob"> Current Job
+                        <input type="checkbox" id="currentJob"> Currently working here
                     </label>
                 </div>
-                <div>
+                <div class="form-group">
                     <label>Description:</label>
-                    <textarea id="description" rows="3"></textarea>
+                    <textarea id="description" placeholder="Describe your responsibilities..." rows="3"></textarea>
                 </div>
-                <button onclick="addExperience()">Add Experience</button>
-                
-                <div id="experienceList">
-                    <h4>Your Experiences:</h4>
-                    <!-- Experiences will appear here -->
-                </div>
+                <button onclick="addExperience()" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Add Experience
+                </button>
             </div>
-            
-            <div>
-                <h3>Skills</h3>
-                <div>
-                    <input type="text" id="newSkill" placeholder="Python, JavaScript, etc">
-                    <button onclick="addSkill()">Add Skill</button>
-                </div>
-                <div id="skillsDisplay"></div>
-            </div>
-            
-            <div>
-                <button onclick="saveCV()">Save CV</button>
-                <button onclick="exportpdf()">Export as PDF</button>
-                <button onclick="resetAll()">Clear All</button>
+            <div id="experienceList">
+                <h4>Your Experiences:</h4>
+                <!-- Experiences will appear here -->
             </div>
         </div>
+    </details>
+    
+    <!-- Skills Section - Dropdown -->
+    <details open>
+        <summary><strong>🔧 Skills</strong></summary>
+        <div class="section-content">
+            <div class="form-group">
+                <label>Add Skill:</label>
+                <input type="text" id="newSkill" placeholder="Python, JavaScript, etc">
+                <button onclick="addSkill()" class="btn-small">Add</button>
+            </div>
+            <div id="skillsDisplay"></div>
+        </div>
+    </details>
+    
+    <!-- Actions -->
+    <div class="actions">
+        <button onclick="saveToLocalStorage()" class="btn btn-success">
+            <i class="fas fa-save"></i> Save CV
+        </button>
+        <button onclick="exportPDF()" class="btn">
+            <i class="fas fa-download"></i> Export PDF
+        </button>
+        <button onclick="resetAll()" class="btn btn-danger">
+            <i class="fas fa-trash"></i> Clear All
+        </button>
+    </div>
+</div>
         
         <!-- Right: Preview -->
         <div class="preview">
